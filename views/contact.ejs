@@ -1,18 +1,21 @@
 <!-- Add our already existing header ejs partial -->
 <%- include("../views/partials/header"); -%>
 
-<div>
-    <h1> <%= contactPageContent %> </h1>
-    <p>You can reach us at uja@centswoman.com or send us a message via the form below.</p>
-    <form class="" action="/" method="post">
-        <label>Name</label>
-        <input type="text" name="newTitle" placeholderautocomplete="off">
-        <label>Email address</label>
-        <input type="text" name="newTitle" placeholderautocomplete="off">
-        <label>Post</label>
-        <textarea name="newPost">Message</textarea>
-        <button type="submit">Send</button>
-    </form>
+<div class="container-fluid">
+    <div>
+        <h1> <%= contactPageContent %> </h1>
+        <p>Got an amazing partnership opportunity or want to contact one of our founding members to speak at your event?</p>
+        <p>You can reach us at uja@centswoman.com or send us a message via the form below.</p>
+        <form class="contact-form" action="/" method="post">
+            <label>Name</label>
+            <input type="text" name="newTitle" placeholderautocomplete="off">
+            <label>Email address</label>
+            <input type="text" name="newTitle" placeholderautocomplete="off">
+            <label>Your message</label>
+            <textarea name="newPost">Message</textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </div>
 
 <!-- Add our already existing header ejs partial -->
