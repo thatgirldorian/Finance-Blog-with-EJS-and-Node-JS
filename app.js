@@ -3,9 +3,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 
-const homeStartingContent = "This is the home content";
-const aboutContent = "And this is the about content.";
-const contactContent = "Here's the contact stuff";
+const homeStartingContent = "Save Smart, Dream Big";
+const aboutContent = "Who We Are";
+const contactContent = "How To Reach Us";
 
 //get express server to work
 const app = express();
@@ -36,8 +36,12 @@ app.get("/contact", function(req, res) {
 //serve up the compose page for publishing new entries
 app.get('/compose', function(req, res) {
   res.render(__dirname + "/views/compose.ejs");
-  let newEntry = req.body;
-  console.log(newEntry);
+})
+
+//post the typed entry
+app.post('/', function(req, res) {
+  let title = req.body.newTitle;
+  console.log(entry);
 })
 
 

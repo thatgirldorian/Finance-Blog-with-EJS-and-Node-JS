@@ -2,8 +2,17 @@
 <%- include("../views/partials/header"); -%>
 
 <div>
-    <h1>Contact Us</h1>
-    <p> <%= contactPageContent %> </p>
+    <h1> <%= contactPageContent %> </h1>
+    <p>You can reach us at uja@centswoman.com or send us a message via the form below.</p>
+    <form class="" action="/" method="post">
+        <label>Name</label>
+        <input type="text" name="newTitle" placeholderautocomplete="off">
+        <label>Email address</label>
+        <input type="text" name="newTitle" placeholderautocomplete="off">
+        <label>Post</label>
+        <textarea name="newPost">Message</textarea>
+        <button type="submit">Send</button>
+    </form>
 </div>
 
 <!-- Add our already existing header ejs partial -->

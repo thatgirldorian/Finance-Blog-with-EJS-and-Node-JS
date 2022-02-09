@@ -2,8 +2,16 @@
 <%- include("../views/partials/header"); -%>
 
 <h1>Compose new entry</h1>
-<input type="type" name="">
-<button type="button">Publish</button>
+
+<form class="" action="/" method="post">
+    <label>Title</label>
+    <input type="text" name="newTitle" placeholderautocomplete="off">
+    <label>Post</label>
+    <textarea name="newPost"></textarea>
+    <button type="submit">Publish</button>
+</form>
+
+
 
 <!-- Add our already existing header ejs partial -->
 <%- include("../views/partials/footer"); -%>
