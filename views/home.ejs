@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Journal - Home</title>
-</head>
-<body>
+<!-- Add our already existing header ejs partial -->
+<%- include("../views/partials/header"); -%>
 
     <div>
         <h1>Home</h1>
-<p> <%= content1 %> </p>
-        <p></p>
+        <p> <%= homeContent %> </p>
     </div>
-    
-</body>
-</html>
+
+<!-- Add our existing footer ejs partial -->
+<%- include("../views/partials/footer"); -%>

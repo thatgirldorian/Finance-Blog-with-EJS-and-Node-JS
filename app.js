@@ -18,19 +18,27 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-//serve our app homepage
+//serve our app homepage and the starting content
 app.get("/", function(req, res) {
-  res.render(__dirname + "/views/home.ejs", {content1: homeStartingContent, content2: aboutContent, content3: contactContent});
+  res.render(__dirname + "/views/home.ejs", {homeContent: homeStartingContent});
 })
 
+//serve up the about page
+app.get("/about", function(req, res) {
+  res.render(__dirname + "/views/about.ejs", {aboutPageContent: aboutContent});
+})
 
+//serve up the contact us page
+app.get("/contact", function(req, res) {
+  res.render(__dirname + "/views/contact.ejs", {contactPageContent: contactContent});
+})
 
-
-
-
-
-
-
+//serve up the compose page for publishing new entries
+app.get('/compose', function(req, res) {
+  res.render(__dirname + "/views/compose.ejs");
+  let newEntry = req.body;
+  console.log(newEntry);
+})
 
 
 //Set up server and make sure it is listening
