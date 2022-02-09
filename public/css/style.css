@@ -15,9 +15,9 @@
     color: #00B4D8 !important;
 }
 
-.footer-padding {
+/* .footer-padding {
 	padding-bottom: 60px;
-}
+} */
 
 .footer {
 	position: absolute;
@@ -57,3 +57,12 @@ button:hover {
     color: white;
 }
 
+.home-img {
+    width: 80%;
+    height: 400px;
+}
+
+.new-post {
+    padding-top: 20px;
+    padding-bottom: 20px
+}

@@ -1,17 +1,26 @@
 <!-- Add our already existing header ejs partial -->
 <%- include("../views/partials/header"); -%>
 
-    <div>
-        <h1><%= homeContent %> </h1>
-        <p>CENTSWOMAN is the one-stop blog for everything finance for women. We give you great, actionable advice so you can be financially independent and in better control of your money.</p>
-
+    <div class="container-fluid">
+        <div>
+            <h1><%= homeContent %> </h1>
+            <p>CENTSWOMAN is the one-stop blog for everything finance for women. We give you great, actionable advice so you can be financially independent and in better control of your money.</p>
+        </div>
+    
+        <div>
+            <img class="home-img" src='./images/home-img1.jpeg' alt="six black women">
+        </div>
+    
+        <div>
+            <p>We have tons of resources for anything money-related: budgeting, investment, cryptocurrency, wealth management and savings!</p>
+        </div>
+    
+        <div class="new-post">
+            <p>Go here to add a new post.</p>
+            <a class="btn" href="/compose">Compose</a>
+        </div>
     </div>
 
-
-    <div>
-        <p>Go here to add a new post.</p>
-        <a class="btn" href="/compose">Compose</a>
-    </div>
-
-<!-- Add our existing footer ejs partial -->
+    <!-- Add our existing footer ejs partial -->
 <%- include("../views/partials/footer"); -%>
+
