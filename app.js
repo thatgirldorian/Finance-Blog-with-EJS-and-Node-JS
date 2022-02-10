@@ -38,12 +38,22 @@ app.get('/compose', function(req, res) {
   res.render(__dirname + "/views/compose.ejs");
 })
 
-//post the typed entry
-app.post('/', function(req, res) {
-  let title = req.body.newTitle;
-  console.log(entry);
-})
+// //post the typed entry
+// app.post('/', function(req, res) {
+//   let title = req.body.newTitle;
+//   console.log(title);
+// })
 
+//post the blog's title and content
+app.post('/', function(req, res) {
+  //create js object to show both of these things at the same time. 
+  const post = {
+      title: req.body.newTitle,
+      content: req.body.newContent
+  }
+  console.log(post.title);
+  console.log(post.content);
+})
 
 //Set up server and make sure it is listening
 app.listen(3000, function() {

@@ -2,6 +2,7 @@
     padding-top: 70px;
     padding-bottom: 70px;
 }
+
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -11,6 +12,7 @@
     font-size: 12px;
     letter-spacing: 5px;
 }
+
 .navbar-nav  li a:hover {
     color: #00B4D8 !important;
 }
@@ -37,10 +39,15 @@
     text-align: center;
 }
 
+h1 {
+    padding-bottom: 20px;
+}
+
 /* Compose form styles */
 input, textarea {
     width: 100%;
-    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 button, .btn {
