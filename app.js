@@ -18,6 +18,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+//create an array to store all the posts we create
+const posts = [];
+
 //serve our app homepage and the starting content
 app.get("/", function(req, res) {
   res.render(__dirname + "/views/home.ejs", {homeContent: homeStartingContent});
@@ -38,12 +41,6 @@ app.get('/compose', function(req, res) {
   res.render(__dirname + "/views/compose.ejs");
 })
 
-// //post the typed entry
-// app.post('/', function(req, res) {
-//   let title = req.body.newTitle;
-//   console.log(title);
-// })
-
 //post the blog's title and content
 app.post('/', function(req, res) {
   //create js object to show both of these things at the same time. 
@@ -51,8 +48,10 @@ app.post('/', function(req, res) {
       title: req.body.newTitle,
       content: req.body.newContent
   }
-  console.log(post.title);
-  console.log(post.content);
+  //add every object created to the posts array
+  posts.push(post);
+  // console.log(post.title);
+  // console.log(post.content);
 })
 
 //Set up server and make sure it is listening
