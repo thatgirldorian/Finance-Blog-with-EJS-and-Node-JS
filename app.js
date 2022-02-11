@@ -23,7 +23,11 @@ const posts = [];
 
 //serve our app homepage and the starting content
 app.get("/", function(req, res) {
-  res.render(__dirname + "/views/home.ejs", {homeContent: homeStartingContent});
+  res.render(__dirname + "/views/home.ejs", {
+    homeContent: homeStartingContent, 
+    newPosts: posts
+  });
+
 })
 
 //serve up the about page
@@ -50,8 +54,7 @@ app.post('/', function(req, res) {
   }
   //add every object created to the posts array
   posts.push(post);
-  // console.log(post.title);
-  // console.log(post.content);
+  res.redirect('/')
 })
 
 //Set up server and make sure it is listening
