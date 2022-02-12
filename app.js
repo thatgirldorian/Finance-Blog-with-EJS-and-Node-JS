@@ -1,7 +1,12 @@
-//require all the needed modules
+//require all the needed modules & libraries
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const _ = require('lodash');
+
+// Load method categories for Lodash
+var array = require('lodash/array');
+var object = require('lodash/fp/object');
 
 const homeStartingContent = "Save Smart, Dream Big";
 const aboutContent = "Who We Are";
