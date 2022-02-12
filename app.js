@@ -46,17 +46,6 @@ app.get('/compose', function(req, res) {
   res.render(__dirname + "/views/compose.ejs");
 })
 
-//serve up one specific entry
-app.get('/posts/:postName', function(req, res) {
-  // console.log(req.params.postName);
-    if (posts[0].title = req.params.postName) {
-      console.log('Match found');
-    } else {
-      console.log('Match NOT found')
-    }
-
-})
-
 //post the blog's title and content
 app.post('/', function(req, res) {
   //create js object to show both of these things at the same time. 
@@ -67,6 +56,22 @@ app.post('/', function(req, res) {
   //add every object created to the posts array
   posts.push(post);
   res.redirect('/')
+})
+
+//serve up one specific blog post through routing
+app.get('/posts/:postName', function(req, res) {
+  let specificPost = req.params.postName;
+
+  posts.forEach(function(post) {
+    storedTitle = post.title
+
+    if (specificPost === storedTitle) {
+      console.log('Match found');
+    } else {
+      console.log('Match NOT found')
+    }
+  })
+
 })
 
 //Set up server and make sure it is listening
