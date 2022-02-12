@@ -4,10 +4,6 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require('lodash');
 
-// Load method categories for Lodash
-var array = require('lodash/array');
-var object = require('lodash/fp/object');
-
 const homeStartingContent = "Save Smart, Dream Big";
 const aboutContent = "Who We Are";
 const contactContent = "How To Reach Us";
@@ -63,18 +59,24 @@ app.post('/', function(req, res) {
   res.redirect('/')
 })
 
-//serve up one specific blog post through routing
+//serve up one specific blog post through routing and used lodash to convert to lower case
 app.get('/posts/:postName', function(req, res) {
-  let specificPost = req.params.postName;
+  let specificTitle = _.lowerCase(req.params.postName);
 
   posts.forEach(function(post) {
-    storedTitle = post.title
+    const storedTitle = _.lowerCase(post.title)
 
-    if (specificPost === storedTitle) {
-      console.log('Match found');
-    } else {
-      console.log('Match NOT found')
-    }
+    if (specificTitle === storedTitle) {
+     //render the specific blog post routed to
+    res.render(__dirname + "/views/post.ejs", {
+      postName: post.title, 
+      postContent: post.content});
+    } 
+    //  else {
+    //   console.log('Match NOT found')
+    // }
+
+    
   })
 
 })
