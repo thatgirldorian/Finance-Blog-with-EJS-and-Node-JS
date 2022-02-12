@@ -21,6 +21,7 @@ app.use(express.static("public"));
 //create an array to store all the posts we create
 const posts = [];
 
+
 //serve our app homepage and the starting content
 app.get("/", function(req, res) {
   res.render(__dirname + "/views/home.ejs", {
@@ -46,8 +47,14 @@ app.get('/compose', function(req, res) {
 })
 
 //serve up one specific entry
-app.get('/posts/:post', function(req, res) {
-  console.log(req.params.post);
+app.get('/posts/:postName', function(req, res) {
+  // console.log(req.params.postName);
+    if (posts[0].title = req.params.postName) {
+      console.log('Match found');
+    } else {
+      console.log('Match NOT found')
+    }
+
 })
 
 //post the blog's title and content
