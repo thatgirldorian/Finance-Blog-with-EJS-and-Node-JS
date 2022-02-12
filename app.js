@@ -45,6 +45,11 @@ app.get('/compose', function(req, res) {
   res.render(__dirname + "/views/compose.ejs");
 })
 
+//serve up one specific entry
+app.get('/posts/:post', function(req, res) {
+  console.log(req.params.post);
+})
+
 //post the blog's title and content
 app.post('/', function(req, res) {
   //create js object to show both of these things at the same time. 
