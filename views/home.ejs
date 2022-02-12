@@ -26,7 +26,10 @@
             <div class="blog-item">
                 <% newPosts.forEach(function(post) { %>
                     <h4> <%= post.title %> </h4> 
-                    <p> <%= post.content %> </p> 
+                    <!-- truncate the blog content on the homepage to the first 100 characters -->
+                    <p> <%= post.content.substring(0, 100).concat('...') %> </p> 
+                    <!-- Add an anchor tag to the post -->
+                    <p><a class="btn" href="/posts/<%=post.title%>">Read More</a></p> 
                     <hr>
                             <%  }) %>
             </div>

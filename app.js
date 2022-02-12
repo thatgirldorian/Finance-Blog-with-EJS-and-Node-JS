@@ -28,10 +28,10 @@ app.get("/", function(req, res) {
   res.render(__dirname + "/views/home.ejs", {
     homeContent: homeStartingContent, 
     newPosts: posts
-  });
-
+  })
 })
 
+  
 //serve up the about page
 app.get("/about", function(req, res) {
   res.render(__dirname + "/views/about.ejs", {aboutPageContent: aboutContent});
@@ -71,15 +71,12 @@ app.get('/posts/:postName', function(req, res) {
     res.render(__dirname + "/views/post.ejs", {
       postName: post.title, 
       postContent: post.content});
-    } 
-    //  else {
-    //   console.log('Match NOT found')
-    // }
-
-    
+    }   
   })
-
 })
+
+// //serve up a blog post when the 'Read more' link is clicked
+// link: '<a href="/posts/:postName">Read More</a>'
 
 //Set up server and make sure it is listening
 app.listen(3000, function() {

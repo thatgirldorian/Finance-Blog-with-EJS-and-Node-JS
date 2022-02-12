@@ -128,3 +128,7 @@ hr {
 .blog-item {
     padding-top: 20px;
 }
+
+a:link {
+    text-decoration: none;
+}
