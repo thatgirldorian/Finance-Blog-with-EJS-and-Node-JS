@@ -18,6 +18,7 @@ app.set('view engine', 'ejs');
 //use body parser and render css files
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+const port = process.env.PORT || 3000;
 
 //create an array to store all the posts we create
 const posts = [];
@@ -79,6 +80,6 @@ app.get('/posts/:postName', function(req, res) {
 // link: '<a href="/posts/:postName">Read More</a>'
 
 //Set up server and make sure it is listening
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log("Server started on port 3000");
 });
