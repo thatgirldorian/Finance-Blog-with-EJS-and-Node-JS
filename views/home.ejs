@@ -9,7 +9,7 @@
                 </div>
         
                 <div class="home-photo image-container">
-                    <img class="home-img" src='./images/table.jpg' alt="six black women">
+                    <img class="home-img" src='./images/money2.jpg' alt="six black women">
                 </div>   
         </div>
 
@@ -20,7 +20,7 @@
                 <!-- add a new item to existing list -->
                 <div class="blog-item">
                     <% newPosts.forEach(function(post) { %>
-                        <h4> <%= post.title %> </h4> 
+                        <h3> <%= post.title %> </h3> 
                         <!-- truncate the blog content on the homepage to the first 100 characters -->
                         <p> <%= post.content.substring(0, 100).concat('...') %> </p> 
                         <!-- Add an anchor tag to the post -->
