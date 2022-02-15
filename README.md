@@ -8,7 +8,11 @@
 - HTML
 - CSS
 - JavaScript
--
+- EJS
+- Lodash
+- Node JS
+- Express JS
+- Heroku
 
 <h3>Link to site:</h3>
 
