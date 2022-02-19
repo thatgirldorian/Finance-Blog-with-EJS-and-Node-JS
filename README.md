@@ -12,7 +12,7 @@ I needed to find a way to get parameter routing to work even when the cases of b
 - CSS
 - JavaScript
 - EJS
-- Lodash
+- Lodash library
 - Node JS
 - Express JS
 - Heroku
