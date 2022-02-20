@@ -24,7 +24,7 @@ https://safe-chamber-03791.herokuapp.com/
 <h3>Screenshot:</h3>
 <img width="1495" alt="Screen Shot 2022-02-18 at 11 40 45 PM" src="https://user-images.githubusercontent.com/40691059/154750874-fb5206c5-098a-4dec-8225-aae528b71c9e.png">
 
-<h3>Project Demo Video:</h3>
+<h3>Project Demo Video:</h3> (change to GIF)
 https://user-images.githubusercontent.com/40691059/154851876-8d97a46e-a77c-402f-88c5-762c812fb0d7.mov
 
 
