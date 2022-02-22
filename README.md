@@ -1,7 +1,7 @@
 # Finance-Blog-with-EJS-and-Node-JS
 
 <h3>Function & Description:</h3>
-This is a woman-centered finance blog. It's a web app that allows the admin/user to write and read blog posts. It shows a truncated version of the post on the homepage. However, the individual blog posts can also be clicked on to go to a dynamic page where the post can be read in full.
+This is a woman-centered finance blog. It's a web app that allows the admin/user to write and read blog posts. It shows a truncated version of the post on the homepage. However, the individual blog posts can also be clicked on to go to a dynamic page.
 
 <h3>Issue Faced & Solution:</h3>
 I needed to find a way to get parameter routing to work even when the cases of blog titles do not match (for instance, lower case vs kebab case). I was able to do this by installing the Lodash JavaScript library and using the lowercase method.
